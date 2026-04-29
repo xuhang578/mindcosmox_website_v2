@@ -95,6 +95,46 @@ main {
   letter-spacing: 0.08em;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.language-switch {
+  display: inline-flex;
+  height: 36px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 13px;
+  border: 1px solid rgba(36, 51, 44, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.52);
+  color: rgba(36, 51, 44, 0.42);
+  font: inherit;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: border-color 220ms ease, background 220ms ease, transform 220ms ease;
+}
+
+.language-switch:hover {
+  transform: translateY(-1px);
+  border-color: rgba(36, 51, 44, 0.24);
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.language-switch i {
+  display: block;
+  width: 1px;
+  height: 12px;
+  background: rgba(36, 51, 44, 0.14);
+}
+
+.language-switch .active {
+  color: var(--ink);
+}
+
 .nav-cta {
   min-width: 102px;
   padding: 8px 18px;
@@ -204,7 +244,7 @@ main {
 
 .hero-copy {
   margin: 42px auto 0;
-  max-width: 600px;
+  max-width: 720px;
   color: rgba(36, 51, 44, 0.66);
   font-size: clamp(15px, 1.03vw, 18px);
   line-height: 1.85;
@@ -988,6 +1028,50 @@ footer {
   text-align: center;
 }
 
+.locale-en .nav-links,
+.locale-en .nav-cta,
+.locale-en .brand-button,
+.locale-en .section-head h2,
+.locale-en .anft-relation-copy h2,
+.locale-en .anft-relation-item h3,
+.locale-en .about-copy h2,
+.locale-en .keyword-item h3,
+.locale-en .service-card h3,
+.locale-en .why-intro h2,
+.locale-en .why-item h3,
+.locale-en .journey-step h3,
+.locale-en .gallery-card,
+.locale-en .scene-list article,
+.locale-en .contact-panel h2 {
+  letter-spacing: 0;
+  text-indent: 0;
+}
+
+.locale-en .hero h1 {
+  max-width: 960px;
+  font-family: "Noto Serif SC", Georgia, "Times New Roman", serif;
+  font-size: clamp(54px, 5.3vw, 88px);
+  letter-spacing: 0;
+  text-indent: 0;
+}
+
+.locale-en .hero-copy,
+.locale-en .about-copy p,
+.locale-en .anft-relation-copy p,
+.locale-en .service-card p,
+.locale-en .why-intro p,
+.locale-en .contact-panel p {
+  letter-spacing: 0;
+}
+
+.locale-en .service-card {
+  min-height: 470px;
+}
+
+.locale-en .journey-step p {
+  max-width: 180px;
+}
+
 @media (max-width: 1200px) {
   .nav-links {
     gap: 28px;
@@ -1059,6 +1143,20 @@ footer {
     display: none;
   }
 
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .nav-actions .nav-cta {
+    display: none;
+  }
+
+  .language-switch {
+    height: 34px;
+    padding: 0 11px;
+    font-size: 11px;
+  }
+
   .hero {
     min-height: 100svh;
     padding: 110px 18px 70px;
@@ -1098,6 +1196,7 @@ footer {
     min-width: 0;
     min-height: 56px;
     font-size: 17px;
+    padding: 0 22px;
   }
 
   .scroll-cue {
@@ -1326,5 +1425,21 @@ footer {
     font-size: 11px;
     line-height: 2;
     letter-spacing: 0.24em;
+  }
+
+  .locale-en .hero h1 {
+    font-size: clamp(46px, 15vw, 70px);
+  }
+
+  .locale-en .hero-copy {
+    font-size: 16px;
+  }
+
+  .locale-en .service-card {
+    min-height: 0;
+  }
+
+  .locale-en footer {
+    letter-spacing: 0.12em;
   }
 }
