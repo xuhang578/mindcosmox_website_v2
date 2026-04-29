@@ -26,7 +26,7 @@ import {
   Waves
 } from "lucide-react";
 import { motion } from "framer-motion";
-import anftLogo from "./assets/anft-logo.jpg";
+import anftLogo from "./assets/anft-logo.png";
 import brandLogo from "./assets/brand-logo-horizontal.png";
 import heroAnftTraining from "./assets/hero-anft-training-bg.jpg";
 
@@ -104,7 +104,7 @@ const anftBadges = [
 
 const anftIntroPoints = [
   ["关系式森林疗愈", "关系式森林疗愈是 ANFT 独创的一套标准化的森林疗愈体系，强调人与自然、人与自身、人与他人的连接。", Leaf],
-  ["国际体系", "ANFT 是美国自然浴森林疗愈协会（Association of Nature and Forest Therapy Guides and Programs）的简称，是权威的国际自然与森林疗愈向导培训体系。", Globe2],
+  ["国际体系", "ANFT是美国自然与森林疗愈协会（Association of Nature and Forest Therapy Guides and Programs）的简称，是权威的国际自然与森林疗愈向导培训体系。", Globe2],
   ["温和进入自然", "强调以安全、缓慢、非评判的方式进入自然，让参与者先放慢，再重新感受周围环境。", Feather],
   ["感官与分享", "通过感官邀请、安静停留与围坐分享，帮助人与自然重新建立更细腻的连接。", Sparkles]
 ];
@@ -113,7 +113,8 @@ const relationalPoints = [
   ["不是户外运动", "它不以体能挑战、路线完成或景点打卡为目标，而是重视人在自然中的真实感受。", Trees],
   ["不是心理咨询", "向导不提供诊断或标准答案，而是创造安全、尊重、允许停顿的体验空间。", Heart],
   ["关系重新被看见", "在自然场域里，人与自然、人与自身、人与他人的关系，会以更柔和的方式被重新感知。", HeartHandshake],
-  ["每个人有自己的节奏", "参与者可以按照自己的身体和情绪状态回应邀请，不需要表现得更好或更正确。", Compass]
+  ["每个人有自己的节奏", "参与者可以按照自己的身体和情绪状态回应邀请，不需要表现得更好或更正确。", Compass],
+  ["从自然中获得支持与疗愈", "ANFT的核心理念是：森林才是疗愈师，向导只是开门人。", Leaf]
 ];
 
 const authorizationPoints = [

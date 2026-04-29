@@ -121,7 +121,7 @@ dist/
    - 核心文案：
      - “ANFT 的关系式森林疗愈是国际权威的森林疗愈体系”
      - “关系式森林疗愈是 ANFT 独创的一套标准化的森林疗愈体系”
-     - “ANFT 是美国自然浴森林疗愈协会（Association of Nature and Forest Therapy Guides and Programs）的简称，是权威的国际自然与森林疗愈向导培训体系。”
+     - “ANFT是美国自然与森林疗愈协会（Association of Nature and Forest Therapy Guides and Programs）的简称，是权威的国际自然与森林疗愈向导培训体系。”
 
 4. 心屿星河与 ANFT
    - 独立区块，位于 ANFT 介绍之后、About 之前。
