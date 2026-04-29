@@ -104,7 +104,7 @@ const anftBadges = [
 
 const anftIntroPoints = [
   ["关系式森林疗愈", "关系式森林疗愈是 ANFT 独创的一套标准化的森林疗愈体系，强调人与自然、人与自身、人与他人的连接。", Leaf],
-  ["国际体系", "ANFT 是 Association of Nature and Forest Therapy Guides and Programs 的简称，是权威的国际自然与森林疗愈向导培训体系。", Globe2],
+  ["国际体系", "ANFT 是美国自然浴森林疗愈协会（Association of Nature and Forest Therapy Guides and Programs）的简称，是权威的国际自然与森林疗愈向导培训体系。", Globe2],
   ["温和进入自然", "强调以安全、缓慢、非评判的方式进入自然，让参与者先放慢，再重新感受周围环境。", Feather],
   ["感官与分享", "通过感官邀请、安静停留与围坐分享，帮助人与自然重新建立更细腻的连接。", Sparkles]
 ];
