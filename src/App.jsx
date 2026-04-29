@@ -1,9 +1,13 @@
 import {
   ArrowRight,
+  BadgeCheck,
+  BookOpen,
   BriefcaseBusiness,
   Building2,
   Check,
   Compass,
+  Feather,
+  Globe2,
   Flower2,
   Heart,
   HeartHandshake,
@@ -13,6 +17,7 @@ import {
   Map,
   MapPinned,
   MoonStar,
+  Phone,
   ShieldCheck,
   Sparkles,
   Sprout,
@@ -21,6 +26,9 @@ import {
   Waves
 } from "lucide-react";
 import { motion } from "framer-motion";
+import anftLogo from "./assets/anft-logo.jpg";
+import brandLogo from "./assets/brand-logo-horizontal.png";
+import heroAnftTraining from "./assets/hero-anft-training-bg.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 26 },
@@ -88,6 +96,33 @@ const gallery = [
 
 const scenes = ["企业员工关怀", "文旅空间共创", "公园与营地活动", "亲子与家庭体验"];
 
+const anftBadges = [
+  ["独家授权", BadgeCheck],
+  ["全球网络", Globe2],
+  ["专业疗愈品牌", Sprout]
+];
+
+const anftIntroPoints = [
+  ["关系式森林疗愈", "关系式森林疗愈是 ANFT 独创的一套标准化的森林疗愈体系，强调人与自然、人与自身、人与他人的连接。", Leaf],
+  ["国际体系", "ANFT 是 Association of Nature and Forest Therapy Guides and Programs 的简称，是权威的国际自然与森林疗愈向导培训体系。", Globe2],
+  ["温和进入自然", "强调以安全、缓慢、非评判的方式进入自然，让参与者先放慢，再重新感受周围环境。", Feather],
+  ["感官与分享", "通过感官邀请、安静停留与围坐分享，帮助人与自然重新建立更细腻的连接。", Sparkles]
+];
+
+const relationalPoints = [
+  ["不是户外运动", "它不以体能挑战、路线完成或景点打卡为目标，而是重视人在自然中的真实感受。", Trees],
+  ["不是心理咨询", "向导不提供诊断或标准答案，而是创造安全、尊重、允许停顿的体验空间。", Heart],
+  ["关系重新被看见", "在自然场域里，人与自然、人与自身、人与他人的关系，会以更柔和的方式被重新感知。", HeartHandshake],
+  ["每个人有自己的节奏", "参与者可以按照自己的身体和情绪状态回应邀请，不需要表现得更好或更正确。", Compass]
+];
+
+const authorizationPoints = [
+  ["独家授权", "拥有中国独家 ANFT 中文培训体系与认证资格。", BadgeCheck],
+  ["标准化服务", "可提供国际标准化自然疗愈服务，并结合本土场景落地。", BookOpen],
+  ["全球资源网络", "连接 ANFT 遍布全球 70+ 国家、3000+ 认证向导的资源网络。", Globe2],
+  ["本土化体验", "将关系式森林疗愈方法与城市压力恢复、文旅空间和企业关怀需求结合。", Sprout]
+];
+
 function Section({ id, className = "", eyebrow, title, subtitle, children, align = "left" }) {
   return (
     <section id={id} className={`section-pad ${className}`}>
@@ -111,11 +146,11 @@ function Section({ id, className = "", eyebrow, title, subtitle, children, align
   );
 }
 
-function Button({ children, variant = "dark" }) {
+function Button({ children, variant = "dark", showArrow = true }) {
   return (
     <a href="#contact" className={`brand-button ${variant === "dark" ? "brand-button-dark" : "brand-button-light"}`}>
       {children}
-      {variant === "dark" && <ArrowRight size={26} strokeWidth={1.8} />}
+      {variant === "dark" && showArrow && <ArrowRight size={26} strokeWidth={1.8} />}
     </a>
   );
 }
@@ -125,8 +160,7 @@ function Nav() {
     <nav className="nav">
       <div className="site-container nav-inner">
         <a href="#" className="brand">
-          <span className="brand-mark">屿</span>
-          <span>心屿星河</span>
+          <img src={brandLogo} alt="心屿星河 Mind Cosmos X" />
         </a>
         <div className="nav-links">
           <a href="#about">关于</a>
@@ -149,6 +183,7 @@ export default function App() {
       <Nav />
 
       <header className="hero">
+        <img className="hero-bg-image" src={heroAnftTraining} alt="" aria-hidden="true" />
         <div className="hero-rings" aria-hidden="true" />
         <div className="hero-stars" aria-hidden="true">
           {Array.from({ length: 28 }).map((_, index) => (
@@ -175,6 +210,90 @@ export default function App() {
           <i />
         </div>
       </header>
+
+      <Section id="anft" className="anft-section" title="ANFT 与关系式森林疗愈" eyebrow="METHOD" align="center">
+        <div className="anft-landscape-panel">
+          <motion.article variants={fadeUp} className="anft-logo-card">
+            <img src={anftLogo} alt="ANFT Certified Guide logo" />
+            <div className="anft-logo-copy">
+              <span>WHAT IS ANFT</span>
+              <h3>ANFT</h3>
+              <p>ANFT 的关系式森林疗愈是国际权威的森林疗愈体系，也是心屿星河开展自然疗愈服务的方法来源之一。</p>
+            </div>
+          </motion.article>
+
+          <motion.div variants={stagger} className="anft-method-columns">
+            <motion.article variants={fadeUp} className="anft-info-card">
+              <div className="anft-card-head">
+                <span>WHAT IS ANFT</span>
+                <h3>ANFT</h3>
+              </div>
+              <div className="anft-point-list">
+                {anftIntroPoints.map(([title, text, Icon]) => (
+                  <div key={title} className="anft-point">
+                    <Icon size={24} strokeWidth={1.6} />
+                    <div>
+                      <h4>{title}</h4>
+                      <p>{text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.article>
+
+            <motion.article variants={fadeUp} className="anft-info-card">
+              <div className="anft-card-head">
+                <span>RELATIONAL FOREST THERAPY</span>
+                <h3>关系式森林疗愈</h3>
+              </div>
+              <div className="anft-point-list">
+                {relationalPoints.map(([title, text, Icon]) => (
+                  <div key={title} className="anft-point">
+                    <Icon size={24} strokeWidth={1.6} />
+                    <div>
+                      <h4>{title}</h4>
+                      <p>{text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.article>
+          </motion.div>
+        </div>
+      </Section>
+
+      <Section className="anft-relation-section">
+        <div className="anft-relation-grid">
+          <motion.div variants={fadeUp} className="anft-relation-copy">
+            <h2>
+              心屿星河
+              <br />
+              与 ANFT
+            </h2>
+            <i />
+            <p>
+              心屿星河拥有中国独家 ANFT 中文培训体系与认证资格，依托 ANFT 的国际标准化方法和全球资源网络，将关系式森林疗愈带入中国本土自然空间与多元合作场景。
+            </p>
+            <p>
+              我们在尊重原有体系的基础上，结合城市压力恢复、文旅空间、企业关怀与亲子家庭需求，提供专业、温和、可落地的自然疗愈体验。
+            </p>
+          </motion.div>
+
+          <motion.div variants={stagger} className="anft-relation-list">
+            {authorizationPoints.map(([title, text, Icon]) => (
+              <motion.article key={title} variants={fadeUp} className="anft-relation-item">
+                <span>
+                  <Icon size={30} strokeWidth={1.6} />
+                </span>
+                <div>
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </div>
+              </motion.article>
+            ))}
+          </motion.div>
+        </div>
+      </Section>
 
       <Section id="about" className="about-section">
         <div className="about-grid">
@@ -288,21 +407,35 @@ export default function App() {
             <ul>
               <li>
                 <Mail size={28} />
-                <span>hello@xinyustarriver.com</span>
+                <span>contact@mindcosmosx.com</span>
               </li>
               <li>
                 <MapPinned size={28} />
-                <span>深圳 / 北京 / 可根据项目落地</span>
+                <span>深圳市南山区招商街道水湾B区A1栋</span>
+              </li>
+              <li>
+                <Phone size={28} />
+                <span>18311312508</span>
               </li>
             </ul>
           </div>
           <aside>
-            <div className="qr-placeholder">
-              <Sparkles size={32} />
-              <span>微信二维码占位</span>
+            <div className="qr-action-list">
+              <div className="qr-action">
+                <div className="qr-placeholder">
+                  <Sparkles size={32} />
+                  <span>小程序二维码</span>
+                </div>
+                <Button showArrow={false}>预约体验</Button>
+              </div>
+              <div className="qr-action">
+                <div className="qr-placeholder">
+                  <HeartHandshake size={32} />
+                  <span>客服二维码</span>
+                </div>
+                <Button showArrow={false}>获取合作方案</Button>
+              </div>
             </div>
-            <Button>预约体验</Button>
-            <Button variant="light">获取合作方案</Button>
           </aside>
         </motion.div>
       </Section>
